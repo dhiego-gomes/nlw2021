@@ -1,0 +1,85 @@
+.content {
+    display: grid;
+    grid-template-columns: 60fr 40fr;
+    grid-template-rows: 11.4rem 1fr;
+
+    grid-template-areas:
+    'header header'
+    'left right';
+}
+
+header {
+    grid-area: header;
+}
+
+#bg {
+    grid-area: left;
+
+    background: url('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e556cbcc-273c-49c1-b000-9b8eace06903/home-bg-img.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210622%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210622T143413Z&X-Amz-Expires=86400&X-Amz-Signature=757a1785b49b43659db72037c7207c48f4de435da1db78b57fd4261ed723f082&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22home-bg-img.svg%22') no-repeat top/contain;
+}
+
+main {
+    grid-area: right;
+
+    display: flex;
+    align-items: center;
+}
+
+main .container {
+    width: min(36.3rem, 100%);
+}
+
+main h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(20px, 5vw, 2.8rem);
+    color: var(--black);
+    margin-bottom: 2.4rem;
+}
+
+input {
+    border: .2rem solid var(--gray-blue);
+    padding: 0 1.6rem;
+}
+
+button,
+.button {
+    font-family: 'Poppins';
+    font-weight: 500;
+    line-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--blue);
+    color: var(--white);
+
+    cursor: pointer;
+    transition: filter .2s;
+}
+
+button:hover,
+.button:hover {
+    filter: brightness(1.2);
+}
+
+button > img,
+.button > img {
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+button.outlined,
+.button.outlined {
+    background-color: var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+}
+
+input,
+button,
+.button {
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
