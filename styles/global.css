@@ -63,6 +63,48 @@ input,
     height: 50px;
 }
 
+button.outlined,
+.button.outlined {
+    background-color: var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+}
+
+button,
+.button {
+    font-family: 'Poppins';
+    font-weight: 500;
+    line-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--blue);
+    color: var(--white);
+
+    cursor: pointer;
+    transition: filter .2s;
+}
+
+button:hover,
+.button:hover {
+    filter: brightness(1.2);
+}
+
+button > img,
+.button > img {
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+input,
+button,
+.button {
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
+
 .content header {
     width: 80%;
     margin: 3.5rem auto;
